@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+.idea/.gitignore
+.idea/download.iml
+.idea/modules.xml
+.idea/php.xml
+src/.DS_Store

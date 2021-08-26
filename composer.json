@@ -1,0 +1,51 @@
+{
+    "name": "bulldots-bulletpoint/bullseye-cms-update",
+    "description": "CMS update command",
+    "keywords": [
+        "bulldots-bulletpoint",
+        "bullseye-cms-update"
+    ],
+    "homepage": "https://github.com/bulldots-bulletpoint/bullseye-cms-update",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Olivier Van de Velde",
+            "email": "olivier@bulldots.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BulldotsBulletpoint\\BullseyeCmsUpdate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BulldotsBulletpoint\\BullseyeCmsUpdate\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BulldotsBulletpoint\\BullseyeCmsUpdate\\BullseyeCmsUpdateServiceProvider"
+            ]
+        }
+    }
+}
