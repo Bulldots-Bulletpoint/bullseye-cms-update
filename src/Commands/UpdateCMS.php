@@ -34,18 +34,18 @@ class UpdateCMS extends Command
     {
 
         //Check if on locale environment.
-        if(!app()->environment('locale')){
+        if(!app()->environment('local')){
 
             $prod = $this->confirm("Running this on PRODUCTION SERVER?", true);
 
             if($prod){
                 $this->line('❌ Don\'t update the CMS on the PRODUCTION server!');
-                $this->line('❌ Update on your locale environment and pull on production server.');
+                $this->line('❌ Update on your local environment and pull on production server.');
                 $this->line('❌ Then do \'composer install --no-dev\' to update the cms on the production server.');
                 return 0;
             }
 
-            $prod2 = $this->confirm("APP_ENV is NOT set to \'locale\' but set to 'production' or something else, so you are on PRODUCTION SERVER?", true);
+            $prod2 = $this->confirm("APP_ENV is NOT set to \'local\' but set to 'production' or something else, so you are on PRODUCTION SERVER?", true);
 
             if($prod2){
                 $this->line('❌ Don\'t update the CMS on the PRODUCTION server!');
